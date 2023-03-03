@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background-color: #4caf50;
+}
+footer {
+  background-color: #333333;
+  text-align: center;
+  padding: 10px 0;
+}
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+main {
+  height: 100vh;
+}
+
+#coins {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  height: 70px;
+  border-bottom: 2px solid #256c28;
+}
+.coin {
+  background-image: url(coin.png);
+  background-size: cover;
+  background-position: center;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-weight: 800;
+}
+#coins .coin {
+  margin: 0 5px;
+}
+
+#balance {
+  height: calc(100vh - 120px);
+  width: calc(100vh - 120px);
+  margin: 25px auto;
+  background-image: url(balance.png);
+  background-size: contain;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+#bar {
+  z-index: -1;
+  background-image: url(bar.png);
+  width: calc(0.73046875 * (100vh - 120px));
+  height: calc(0.08203125 * (100vh - 120px));
+  background-size: cover;
+  position: absolute;
+  bottom: calc(0.445 * (100vh - 120px));
+  left: calc(0.134765625 * (100vh - 120px));
+  transform: rotate(0deg);
+  transition: 0.5s transform ease-in-out;
+}
+.plate {
+  background-image: url(plate.png);
+  width: calc(0.302734375 * (100vh - 120px));
+  min-height: calc(0.07421875 * (100vh - 120px));
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  position: absolute;
+  bottom: calc(0.51 * (100vh - 120px));
+  transition: 0.5s bottom ease-in-out, 0.5s left ease-in-out, 0.5s right ease-in-out;
+}
+.plate .coin {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 0.8em;
+  transform: rotate(180deg);
+}
+.plate#left{
+  left: 0;
+}
+.plate#right{
+  right: 0;
+}
+.plate .bucket{
+    width: 100%;
+    height: 100%;
+    padding-top: calc(0.07421875 * (100vh - 120px));
+    transform: rotate(180deg);
+    text-align: center;
+}
+
+.hide {
+  display: none;
+}
