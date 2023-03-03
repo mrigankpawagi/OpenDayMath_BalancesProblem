@@ -80,9 +80,9 @@ main {
 }
 .plate .coin {
   display: inline-block;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
   font-size: 0.8em;
   transform: rotate(180deg);
 }
@@ -102,4 +102,43 @@ main {
 
 .hide {
   display: none;
+}
+
+#measure{
+    position: absolute;
+    top: 70px;
+    font-size: 24px;
+    text-transform: uppercase;
+    width: 200px;
+    padding: 10px;
+    left: calc(50vw - 100px);
+    background: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 4px;
+    z-index: 9;
+}
+
+#history{
+    position: fixed;
+    right: 0;
+    top: 70px;
+    width: 300px;
+    height: calc(100vh - 70px);
+    overflow-y: scroll;
+}
+#history canvas{
+    width: 275px!important;
+    height: 275px!important;
+    margin: 5px auto;
+    display: block;
+    border-radius: 20px;
+}
+#history h2{
+    text-align: center;
+    color: #fff;
+    margin: 10px 0;
 }

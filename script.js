@@ -68,11 +68,10 @@ function drop(e) {
     
 
     e.target.classList.remove("drag-over");
-    draggable.classList.remove("hide");
-
-    weigh();
-  
+    draggable.classList.remove("hide");  
 }
+
+document.querySelector("#measure").addEventListener("click", weigh);
 
 function weigh() {
     var left = 0; 
@@ -105,5 +104,11 @@ function weigh() {
         document.querySelector("#right").style.bottom = 'calc(0.51 * (100vh - 120px))';
         document.querySelector("#right").style.right = '0';
     }
-    console.log(left, right);
+    // console.log(left, right);
+    
+    var LOG = document.querySelector("#balance").innerHTML;
+    html2canvas(document.querySelector("#balance")).then(function(canvas) {
+        document.querySelector("#history-list").prepend(canvas);
+    });
 }
+
