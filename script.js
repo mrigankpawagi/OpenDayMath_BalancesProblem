@@ -112,3 +112,6 @@ function weigh() {
     });
 }
 
+document.querySelector("#reveal").addEventListener("click", function(){
+  alert(`Counterfeit Coin: ${biased+1}\nBias: ${biasing > 0 ? "Heavier" : "Lighter"}`)
+});

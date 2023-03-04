@@ -104,7 +104,7 @@ main {
   display: none;
 }
 
-#measure{
+#measure, #reveal{
     position: absolute;
     top: 70px;
     font-size: 24px;
@@ -120,6 +120,14 @@ main {
     font-weight: 600;
     letter-spacing: 4px;
     z-index: 9;
+}
+#reveal{
+    top: unset;
+    bottom: 0;
+    left: 0;
+    font-size: 12px;
+    color: black;
+    width: 150px;
 }
 
 #history{
