@@ -81,7 +81,7 @@ function weigh() {
     var left_biased = document.querySelectorAll("#left .biased").length;
     var right_biased = document.querySelectorAll("#right .biased").length;
     left = left_coins + 0.1 * left_biased;
-    right = right_coins + 0.1 * right_biased;
+    right = right_coins + 0.1 * right_biased * biasing;
     if (left > right) {
         document.querySelector("#bar").style.transform = "rotate(-25deg)";
         document.querySelector("#left").style.bottom = 'calc(0.365 * (100vh - 120px))';
